@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+// Colors
+$lightblue: #00a9e5;
+$blue: #0094ce;
+$gray: #f4f4f4;
+$darkgray: #777777;
+$yellow: #ffb600;
+$white: #ffffff;
+
+// Breakpoints
+$bp-mobile: 768px;
+$bp-tablet: 992px;
+$bp-desktop-s: 1200px;
+$bp-desktop-l: 1440px;
+$bp-desktop-xl: 1930px;
+
+// Mixins
+@mixin ElementBefore($top, $left){
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: $top;
+  left: $left;
+  background-color: #33baea;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+//Animations
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+    opacity: .8;
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
